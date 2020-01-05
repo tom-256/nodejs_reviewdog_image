@@ -1,4 +1,5 @@
 FROM node:10.18.0-alpine3.11
-RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s latest
-RUN apk add git
+RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s latest \
+    chmod +x bin/reviewdog \
+    apk add git
 USER node
